@@ -140,7 +140,7 @@ def upload_file():
             </div>
             <footer class="footer">
                 <div class="container text-center">
-                    <span class="text-secondary">Made by Mohammed Mushahid Qureshi(<a href="https://github.com/mushahidq">Github</a>). <a href="https://github.com/mushahidq">Code for this site.</a></span>
+                    <span class="text-secondary">Made by Mohammed Mushahid Qureshi(<a href="https://github.com/mushahidq">Github</a>). <a href="https://github.com/mushahidq/py_colour_identifier">Code for this site.</a></span>
                 </div>
             </footer>
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
