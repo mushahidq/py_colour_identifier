@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Colour Identifier</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/sticky-footer.css') }}">
+        <style>
+            html, body {
+                height: 100%;
+            }
+            body {
+                display: -ms-flexbox;
+                display: flex;
+                -ms-flex-align: center;
+                align-items: center;
+                padding-top: 40px;
+                background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+                background-size: 400% 400%;
+                animation: gradient 15s ease infinite;
+            }
+            @keyframes gradient {
+                0% {
+                    background-position: 0% 50%;
+                }
+                50% {
+                    background-position: 100% 50%;
+                }
+                100% {
+                    background-position: 0% 50%;
+                }
+            }
+            .btn-outline-light{
+                color: #f8f9fa;
+                border-color: #f8f9fa;
+                background-color: transparent;
+            }
+            .btn-outline-light:hover {
+                color: #212529;
+                background-color: #f8f9fa;
+                border-color: #f8f9fa;
+            }
+            div img{
+                max-width: 600px;
+            }
+        </style>
+    </head>
+    <body style="display:flex; align-items:center; height: 100%;">
+        <div class="container align-middle text-center">
+            <h1 class="text-center align-middle">Top {{ n }} colours in your image</h1>
+            <img src="{{ url_for('static', filename='images/pie.png') }}"></img><br />
+            <a href="{{ url_for('upload_file') }}" role="button" class="btn btn-outline-light">Try another image</a>
+        </div>
+        <footer class="footer">
+            <div class="container text-center">
+                <span class="text-secondary">Made by Mohammed Mushahid Qureshi(<a href="https://github.com/mushahidq">Github</a>). <a href="https://github.com/mushahidq">Code for this site.</a></span>
+            </div>
+        </footer>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    </body>
+</html>
