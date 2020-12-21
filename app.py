@@ -153,6 +153,3 @@ def colours(filename, n = 5):
     file = os.path.join(app.config['UPLOAD_FOLDER'], filename)
     get_colours(file, col, True)
     return render_template('pie.html', n=n)
-
-if(__name__ == "__main__"):
-    app.run(debug=True)
