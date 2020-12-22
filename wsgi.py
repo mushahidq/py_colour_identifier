@@ -1,4 +1,4 @@
-from py_colour_identifier import app
+from colour_identifier import app
 
 if __name__ == "__main__":
     app.run()
