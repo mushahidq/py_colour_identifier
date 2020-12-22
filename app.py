@@ -74,12 +74,9 @@ def upload_file():
             return redirect(request.url)
         if file and allowed_file(file.filename):
             filename = secure_filename(file.filename)
-            if !(os.path.isdir('static/images/')):
-                if !(os.path.isdir('static/')):
-                    os.mkdir('static/')
-                    os.mkdir('static/images/')
-                else:
-                    os.mkdir('static/images/')
+            try:
+                os.mkdir('static/')
+                os.mkdir('static/images/')
             file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
             return redirect(url_for('colours', filename = filename, n = n))
     else:
