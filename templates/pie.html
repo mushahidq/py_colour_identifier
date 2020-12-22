@@ -47,7 +47,7 @@
     <body style="display:flex; align-items:center; height: 100%;">
         <div class="container align-middle text-center">
             <h1 class="text-center align-middle">Top {{ n }} colours in your image</h1>
-            <img src="{{ send_from_directory(app.config["UPLOAD_FOLDER"], filename=image_name) }}"></img><br />
+            <img src="{{ send_from_directory(app.config["UPLOAD_FOLDER"], filename='pie.png') }}"></img><br />
             <a href="{{ url_for('upload_file') }}" role="button" class="btn btn-outline-light">Try another image</a>
         </div>
         <footer class="footer">
