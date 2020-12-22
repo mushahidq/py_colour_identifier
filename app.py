@@ -1,4 +1,4 @@
-from flask import Flask, flash, request, redirect, url_for, send_from_directory, send_file, render_template
+from flask import Flask, flash, request, redirect, url_for, send_from_directory, send_file, render_template, make_response
 from werkzeug.utils import secure_filename
 import os
 
@@ -53,6 +53,11 @@ ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif'}
 
 app =Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+
+resp = make_response()
+resp.headers["Cache-Control"] = "no-cache, no-store, must-revalidate"
+resp.headers["Pragma"] = "no-cache"
+resp.headers["Expires"] = "0"
 
 def allowed_file(filename):
     return '.' in filename and \
