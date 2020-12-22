@@ -48,7 +48,7 @@ def get_colours(img_path, no_of_colours, show_chart):
         return rgb_colours
 
         
-UPLOAD_FOLDER = '/app/static/images'
+UPLOAD_FOLDER = '/app/tmp/static/images'
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif'}
 
 app =Flask(__name__)
@@ -75,16 +75,16 @@ def upload_file():
         if file and allowed_file(file.filename):
             filename = secure_filename(file.filename)
             try:
-                os.mkdir('/app/static/')
-                os.mkdir('/app/static/images/')
+                os.mkdir('/app/tmp/static/')
+                os.mkdir('/app/tmp/static/images/')
             except:
                 file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
                 return redirect(url_for('colours', filename = filename, n = n))
             file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
             return redirect(url_for('colours', filename = filename, n = n))
     else:
-        if(os.path.isfile('static/images/pie.png')):
-            os.remove('static/images/pie.png')
+        if(os.path.isfile('/app/tmp/static/images/pie.png')):
+            os.remove('/app/tmp/static/images/pie.png')
     return '''
         <!doctype html>
         <head>
