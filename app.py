@@ -78,8 +78,10 @@ def upload_file():
                 os.mkdir('/app/tmp/static/')
                 os.mkdir('/app/tmp/static/images/')
             except:
+                f = open(os.path.join(app.config['UPLOAD_FOLDER'], "x")
                 file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
                 return redirect(url_for('colours', filename = filename, n = n))
+            f = open(os.path.join(app.config['UPLOAD_FOLDER'], "x")
             file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
             return redirect(url_for('colours', filename = filename, n = n))
     else:
