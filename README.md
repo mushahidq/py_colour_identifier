@@ -9,3 +9,6 @@ Make sure you have python and pip installed.
    Activate the environment on windows by running `.\shiny_new_env\Scripts\activate.bat`
 2. Install the requirements `pip install -r requirements.txt`
 3. Run the app.py `python app.py`
+
+
+_Try out the web version at [Colour Identifier](https://colour-identifier.herokuapp.com/)_
